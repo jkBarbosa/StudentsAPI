@@ -16,6 +16,6 @@ Setup:
   <br/>}<br/>
   <br/><br/>
   *update database schema*<br/>
-  using console terminal in EntityFramework Project and execute "dotnet ef database update"
+  open console terminal in EntityFramework Project and execute "dotnet ef database update"
 
 
