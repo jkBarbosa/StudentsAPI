@@ -10,7 +10,7 @@ Setup:
  
  <br/>
  *connection string*<br/>
- in both projects Api.Rest and Entity Framework open appsettigs.json and add this key: 
+ in both projects Api.Rest and Entity Framework open appsettigs.json and add this key: <br/>
  "ConnectionStrings": {
     "StudentsAppDbContext": "Server=localhost;Port=3306;Database={yourDatabase};Uid=root;Pwd={yourPassword}"
   }
