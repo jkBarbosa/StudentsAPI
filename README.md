@@ -2,20 +2,23 @@
 example API using asp net core + CQRS and Entity Framework
 
 
-Setup:
+## Setup:
 
-<br/><br/>
-*log path*<br/>
- open StudentsDemoApp\StudentsDemoApp/nlog.config and set correct path to save log files.
+- ### Docker:
+  - just executing docker-compose up -d in root folder.
+  - execute these commands in a terminal:
+  ```
+  docker exec -it studentsapp-api /bin/bash
+  cd ..
+  cd migration
+  ./EFMigrationUtility
+  ```
+  note: can you press ctrl + d to exit.
  
- <br/><br/>
- *connection string*<br/>
- in both projects Api.Rest and Entity Framework open appsettigs.json and add this key: <br/>
- "ConnectionStrings": <br/>{<br/>
-    "StudentsAppDbContext": "Server=localhost;Port=3306;Database={yourDatabase};Uid=root;Pwd={yourPassword}"
-  <br/>}<br/>
-  <br/><br/>
-  *update database schema*<br/>
-  open console terminal in EntityFramework Project and execute "dotnet ef database update"
+  after these steps the application is already configured, and can be accessed through url: localhost:5000/
+
+- ### Host Manually Using IDE
+ - just change connectionString inside Api.Rest and Entity Framework projects.
+
 
 
