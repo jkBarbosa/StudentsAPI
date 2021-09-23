@@ -5,8 +5,8 @@ example API using asp net core + CQRS and Entity Framework
 ## Setup:
 
 - ### Docker:
-  - just executing docker-compose up -d in root folder.
-  - execute these commands in a terminal:
+  1. just executing docker-compose up -d in root folder.
+  2. execute these commands in a terminal:
   ```
   docker exec -it studentsapp-api /bin/bash
   cd ..
@@ -22,3 +22,10 @@ example API using asp net core + CQRS and Entity Framework
 
 
 
+## Features
+- [x] Add CQRS
+- [x] IoC using assemblies
+- [x] Add UnitOfWork
+- [ ] Add Exception handlers
+- [ ] Add Validators
+- [ ] Add Log
