@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Rest", "StudentsDemoApp\Api.Rest.csproj", "{9BD797EB-6E57-4EE8-889D-5134F5096945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api.Rest", "StudentsDemoApp\Api.Rest.csproj", "{9BD797EB-6E57-4EE8-889D-5134F5096945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "StudentsDemoApp.Core\Core.csproj", "{796030B0-C5A5-48C2-8AF3-9B37F0FB098D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "StudentsDemoApp.Core\Core.csproj", "{796030B0-C5A5-48C2-8AF3-9B37F0FB098D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{BA02475D-D7EC-4F73-8448-E1F50F72495D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{BA02475D-D7EC-4F73-8448-E1F50F72495D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{FC245A94-7347-4F6F-AD75-C021E5D6E8A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{FC245A94-7347-4F6F-AD75-C021E5D6E8A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFMigrationUtility", "EFMigrationUtility\EFMigrationUtility.csproj", "{776C7B21-D89D-447C-8E4A-D15F3C379E06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FC245A94-7347-4F6F-AD75-C021E5D6E8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC245A94-7347-4F6F-AD75-C021E5D6E8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC245A94-7347-4F6F-AD75-C021E5D6E8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776C7B21-D89D-447C-8E4A-D15F3C379E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776C7B21-D89D-447C-8E4A-D15F3C379E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776C7B21-D89D-447C-8E4A-D15F3C379E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776C7B21-D89D-447C-8E4A-D15F3C379E06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

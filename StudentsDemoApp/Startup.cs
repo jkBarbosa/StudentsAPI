@@ -26,7 +26,7 @@ namespace Api.Rest
                 //.AddUserSecrets<Startup>(false)
                 .AddEnvironmentVariables();
 
-            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
+            //LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 
 
 
@@ -40,9 +40,10 @@ namespace Api.Rest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ILoggerManager, LoggerManager>();
+            //services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddControllers();
-            
+            services.AddSwaggerGen();
+
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -77,7 +78,16 @@ namespace Api.Rest
 
             app.UseAuthorization();
 
-            app.UseMiddleware<ExceptionMiddleware>();
+            //app.UseMiddleware<ExceptionMiddleware>();
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Students API DEMO v1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseEndpoints(endpoints =>
             {
