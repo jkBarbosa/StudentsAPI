@@ -3,8 +3,8 @@ WORKDIR /app
 #
 # copy csproj and restore as distinct layers
 COPY *.sln .
-COPY StudentsDemoApp/*.csproj ./StudentsDemoApp/
-COPY StudentsDemoApp.Core/*.csproj ./StudentsDemoApp.Core/
+COPY API/*.csproj ./API/
+COPY Core/*.csproj ./Core/
 COPY Domain/*.csproj ./Domain/
 COPY EntityFramework/*.csproj ./EntityFramework/
 COPY EFMigrationUtility/*.csproj ./EFMigrationUtility/
@@ -12,13 +12,13 @@ COPY EFMigrationUtility/*.csproj ./EFMigrationUtility/
 RUN dotnet restore 
 #
 # copy everything else and build app
-COPY StudentsDemoApp/. ./StudentsDemoApp/
-COPY StudentsDemoApp.Core/. ./StudentsDemoApp.Core/
+COPY API/. ./API/
+COPY Core/. ./Core/
 COPY Domain/. ./Domain/ 
 COPY EntityFramework/. ./EntityFramework/
 COPY EFMigrationUtility/. ./EFMigrationUtility/
 #
-WORKDIR /app/StudentsDemoApp
+WORKDIR /app/API
 RUN dotnet publish -c Release -o out 
 #
 WORKDIR /app/EFMigrationUtility
@@ -35,6 +35,6 @@ COPY --from=build /app/EFMigrationUtility/migration ./
 #
 WORKDIR /app 
 #
-COPY --from=build /app/StudentsDemoApp/out ./
+COPY --from=build /app/API/out ./
 ENTRYPOINT ["dotnet", "Api.Rest.dll"]
 
